@@ -1,0 +1,39 @@
+ 
+.input { 
+    width: 80%;
+    margin-top: 40px; 
+    padding: 50px 40px; 
+    display: inline-block; 
+    background-color: #ccc;
+    input {
+        width: 80%; 
+        padding: 20px 40px; 
+        margin: 8px 0; 
+        display: inline-block; 
+        border: 1px solid #ccc; 
+        box-sizing: border-box; 
+    }
+
+
+    &-fontSearch {
+        position: relative;
+
+    i {
+        position: absolute;
+        left: 135px;
+        top: 28px;
+        color: gray;
+    }
+    }
+     
+
+    // &-container { 
+    //     padding: 16px; 
+    // } 
+} 
+
+  
+
+  
+
+  
