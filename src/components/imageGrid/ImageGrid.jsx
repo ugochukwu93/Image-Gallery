@@ -23,28 +23,28 @@ export default function ImageGrid( {photos, filteredResults, searchInput}) {
         
         <>
         
-            <div className={model? 'model open' : 'model'}>
+            <div className={model? 'model open' : 'model'} >
                 <img src={tempImgSrc} alt="" className='img'/>
                 <div className="svg">
-                <img src={closeIcon} alt="" height={50} onClick={()=> close()}/>
+                <img src={closeIcon} alt="" height={50} onClick={()=> close()} />
                 </div>
             </div>
             <div className='imageGrid'>
                 {searchInput.length > 1 ?(
-                filteredResults.map((photo, index) => {
+                filteredResults.map((photo, id) => {
                     return(
                         <div>
                             <div className='imageGrid-img'>
-                                <img src={photo.urls.small} alt="" key={index} />
+                                <img src={photo.urls.small} alt="" key={id} />
                             </div>
                             <p>{photo.description}</p>
                         </div>
                     
                 )})):
-                photos.map((img, index) =>(
+                photos.map((img, id) =>(
                     <div>
                         <div className='imageGrid-img' onClick={()=> getImg(img.urls.small)}>
-                            <img src={img.urls.small} alt="" key={index}/>
+                            <img src={img.urls.small} alt="" key={id}/>
                             <div className='details'>
                             <span>{img.description}</span>
                         </div>
